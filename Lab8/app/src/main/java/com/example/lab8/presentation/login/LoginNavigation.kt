@@ -3,8 +3,10 @@ package com.example.lab8.login
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import com.example.lab8.characters.CharacterScreenDestination
+import com.example.lab8.characters.navigateTocharacterScreen
 import kotlinx.serialization.Serializable
 
 @Serializable

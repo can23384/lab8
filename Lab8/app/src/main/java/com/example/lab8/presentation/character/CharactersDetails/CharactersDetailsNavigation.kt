@@ -19,13 +19,14 @@ fun NavController.navigateToCharacterDetailScreen(
     this.navigate(destination, navOptions)
 }
 
-fun NavGraphBuilder.CharacterDetailScreen(
+fun NavGraphBuilder.characterDetailScreen(
     onNavigateBack: () -> Unit
 ) {
     composable<CharacterDetailsDestination> { backStackEntry ->
         val destination: CharacterDetailsDestination = backStackEntry.toRoute()
         CharacterDetailRoute(
             CharacterId = destination.characterId,
+            onNavigateBack = onNavigateBack
         )
     }
 }

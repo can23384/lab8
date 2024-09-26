@@ -17,6 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lab8.R
+import com.example.lab8.characters.CharacterScreenRoute
 import com.example.lab8.ui.theme.Lab8Theme
 
 @Composable
@@ -71,3 +72,10 @@ private fun Login(
 }
 
 
+@Preview(showBackground = true)
+@Composable
+fun PreviewCharacterScreen() {
+    Login(
+        onEntrarClick = { /* Acción simulada para la vista previa */ }
+    )
+}

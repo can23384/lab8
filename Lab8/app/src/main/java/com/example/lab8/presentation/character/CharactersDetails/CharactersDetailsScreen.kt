@@ -41,11 +41,12 @@ import com.example.lab8.ui.theme.Lab8Theme
 @Composable
 fun CharacterDetailRoute(
     CharacterId: Int,
+    onNavigateBack: () -> Unit
 
 ) {
 
     CharacterDetailsScreen(
-        CharacterId = CharacterId,
+        CharacterId = CharacterId, onNavigationBack = onNavigateBack
     )
 }
 
@@ -53,6 +54,7 @@ fun CharacterDetailRoute(
 @Composable
 private fun CharacterDetailsScreen(
     CharacterId: Int,
+    onNavigationBack: () -> Unit,
     modifier: Modifier = Modifier
 ){
     Column(
@@ -69,7 +71,7 @@ private fun CharacterDetailsScreen(
                 navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
             ),
             navigationIcon = {
-                IconButton(onClick = { /*TODO*/ }) {
+                IconButton(onClick = onNavigationBack) {
                     Icon(
                         Icons.Default.ArrowBack,
                         contentDescription = "Back"
